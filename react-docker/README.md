@@ -4,29 +4,32 @@ To ensure that the port is accessible from outside the container, follow these s
 
 ### 1. Update `package.json` Scripts
 
-Add the `--host` flag to the `dev` script in your `package.json` file:
+- Add the `--host` flag to the `dev` script in your `package.json` file:
 
 ````json
 "scripts": {
   "dev": "vite --host",
   // other scripts...
-}```
+}
+````
 
 ### 2. Build the Docker Image
-To create the Docker image, use the following command:
+- To create the Docker image, use the following command:
 
-
-docker build -t react-docker .
-
+```bash
+$docker build -t react-docker .
+```
 ### 3. Create and Run the Docker Container
-To create and run the container, execute this command:
+- To create and run the container, execute this command:
+
+```bash
+$ docker run -p 5173:5173 react-docker
+```
 
 
-docker run -p 5173:5173 react-docker
+- To Create and Run the Docker Container which is listening to any changes in the local working directory, execute this command:
 
+```bash
+$ docker run -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules react-docker
+```
 
-To Create and Run the Docker Container which is listening to any changes in the local working directory, execute this command:
-
-
-docker run -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules react-docker
-````
