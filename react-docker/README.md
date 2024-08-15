@@ -6,12 +6,11 @@ To ensure that the port is accessible from outside the container, follow these s
 
 - Add the `--host` flag to the `dev` script in your `package.json` file:
 
-````json
+```json
 "scripts": {
   "dev": "vite --host",
-  // other scripts...
 }
-````
+```
 
 ### 2. Build the Docker Image
 - To create the Docker image, use the following command:
