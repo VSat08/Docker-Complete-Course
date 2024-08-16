@@ -27,6 +27,7 @@ $ docker run -p 5173:5173 react-docker
 
 
 - To Create and Run the Docker Container which is listening to any changes in the local working directory, execute this command:
+<<<<<<< HEAD
 
 ```bash
 $ docker run -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules react-docker
@@ -38,10 +39,18 @@ $ docker run -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules react-docker
 ```bash
 $ docker tag react-docker uxsatyam/react-docker 
 ```
+=======
+>>>>>>> 17115b63b0eb8494bc04fd8a956f7b0245c062d1
 
+```bash
+$ docker run -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules react-docker
+```
 
+<<<<<<< HEAD
 - To push it into ther epo, execute this command:
 
 ```bash
 $ docker push uxsatyam/react-docker
 ```
+=======
+>>>>>>> 17115b63b0eb8494bc04fd8a956f7b0245c062d1
